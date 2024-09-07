@@ -576,6 +576,7 @@ MonoBehaviour:
   rotationSpeed: 4
   rotationAcceleration: 0.5
   frictionConstant: 0.1
+  bulletPrefab: {fileID: 6750494003268260322, guid: 8c65d263542474b4ba8ae7f7181b98c3, type: 3}
 --- !u!114 &1905943516
 MonoBehaviour:
   m_ObjectHideFlags: 0
