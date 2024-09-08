@@ -1,10 +1,13 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Enemy : MonoBehaviour
 {
     public float speedRatio;
+    public UnityAction<uint> deathAction;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +24,7 @@ public class Enemy : MonoBehaviour
     {
         Debug.Log("Collided - Enemy");
         // When we hit something destroy ourselves
+        deathAction.Invoke(1);
         Destroy(gameObject);
     }
 }

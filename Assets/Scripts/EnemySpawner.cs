@@ -39,6 +39,7 @@ public class EnemySpawner : MonoBehaviour
         // Convert this point to screenspace coordinates.
         float angle = UnityEngine.Random.Range(0f, (float)(Math.PI*2f));
         newEnemy.transform.position = polarToCart(angle);
+        newEnemy.GetComponent<Enemy>().deathAction += GameController.instance.addToScore;
     }
 
     private Vector2 polarToCart(float angle)
